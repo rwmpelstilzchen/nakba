@@ -1,6 +1,6 @@
-\documentclass[twoside]{book}
-\usepackage[paper=a6paper, margin=0.3cm]{geometry}
-\setlength\parskip{\smallskipamount}
+\documentclass{article}
+\usepackage[paper=a5paper, margin=1.75cm]{geometry}
+\setlength\parskip{\medskipamount}
 \setlength\parindent{0pt}
 \setlength\labelsep{0pt}
 
@@ -12,19 +12,10 @@
 \usepackage{graphicx}
 
 
-\long\def\symbolfootnote[#1]#2{\begingroup%
-\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup} 
+\usepackage{url, longtable, setspace, wrapfig, cancel, paralist, pbox}
+%\usepackage[normalsections, normalmargins, normalfloats, normalindent, normaltitle, normalleading, normallooseness, normalbib, normalbibnotes]{savetrees}
 
-\usepackage{url, longtable, setspace, wrapfig, cancel}
-\usepackage[normalsections, normalmargins, normalfloats, normalindent, normaltitle, normalleading, normallooseness, normalbib, normalbibnotes]{savetrees}
-
-\usepackage{fancyhdr} 
-\pagestyle{fancy}
-\fancyhead{} % clear all header fields 
-\fancyfoot{} % clear all footer field
-%\fancyhead{LO}{\rotatebox{-90}{הוצאת ’חיפושית‘}}
-%\fancyfoot[LO]{{\vspace{-1.2cm}\fontspec{Unicode Symbols}⤾}}
-%\renewcommand{\headrulewidth}{0.4pt} 
+\setlength{\leftmargini}{0.3cm}
 
 \newcommand{\textfill}[1]{\resizebox{\linewidth}{!}{#1}}
 
@@ -37,16 +28,22 @@
 \newcommand{\BH}[1]{\RL{\fontspec[Mapping=tex-text, Script=Hebrew, Scale=1.0]{SBL Hebrew}#1}}
 %\setmonofont[Mapping=tex-text] {LMTypewriter10 Regular}
 \setmonofont[Mapping=tex-text, Scale=0.9] {PragmataPro}
-\newcommand{\Ar}[1]{\RL{\fontspec[Scale=1.0]{Geeza Pro}#1}}
-\newfontfamily\LatinFont[Mapping=tex-text, Scale=1.0]{Gentium Basic}
+\newcommand{\Ar}[1]{\RL{\fontspec[Scale=1.0, Script=Arabic, Language=Arabic]{Droid Arabic Naskh}#1}}
+\newfontfamily\LatinFont[Mapping=tex-text, Scale=1.0]{Vesper Pro}
 \renewcommand{\L}[1]{{\LR{\LatinFont #1}}}
 %\renewcommand{\labelitemi}{\LR{\fontspec{FreeSerif}~~~~{☠}}}
 \renewcommand{\labelitemi}{\L{~~~•}}
 \newcommand{\smaller}[1]{{\small #1}}
 %\newenvironment{\bulletize}{\begin{itemize}}{\end{itemize}
-\newcommand{\bull}[1]{\item\sublarger{ש}#1}
-%\newcommand{\bull}[1]{\labelitemi \sublarger{ש}#1\\}
-\newcommand{\reference}[2]{ {\small\texttt{\LR{[#1]}}}}
+%\newcommand{\bull}[1]{\item\larger{ש}#1,}
+\newcommand{\bull}[1]{{\setlength\parindent{-0.5em}{\Large ש}#1}
+
+}
+\newcommand{\bullclean}[1]{\setlength\parindent{-0.5em}{\Large ש}#1
+
+}
+%\newcommand{\bull}[1]{\labelitemi \larger{ש}#1\\}
+\newcommand{\reference}[2]{{\small\texttt{\LR{[#1]}}}}
 \newcommand{\numdata}[1]{#1}
 \newcommand{\larger}[1]{{\large{#1}}}
-\newcommand{\sublarger}[1]{{\large{#1}}}
+\newcommand{\hl}[1]{\textbf{#1}}
