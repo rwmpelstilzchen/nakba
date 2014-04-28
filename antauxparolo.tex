@@ -1,6 +1,6 @@
 \documentclass{article}
-\usepackage[paper=a5paper, margin=1.75cm]{geometry}
-\setlength\parskip{\medskipamount}
+\usepackage[paper=a5paper, margin=1.5cm]{geometry}
+\setlength\parskip{0.2cm plus 0.1cm minus 0.1cm}
 \setlength\parindent{0pt}
 \setlength\labelsep{0pt}
 
@@ -12,7 +12,7 @@
 \usepackage{graphicx}
 
 
-\usepackage{url, longtable, setspace, wrapfig, cancel, paralist, pbox}
+\usepackage{url, longtable, setspace, wrapfig, cancel, paralist, pbox, hyperref}
 %\usepackage[normalsections, normalmargins, normalfloats, normalindent, normaltitle, normalleading, normallooseness, normalbib, normalbibnotes]{savetrees}
 
 \setlength{\leftmargini}{0.3cm}
@@ -43,7 +43,7 @@
 
 }
 %\newcommand{\bull}[1]{\labelitemi \larger{ש}#1\\}
-\newcommand{\reference}[2]{{\small\texttt{\LR{[#1]}}}}
+\newcommand{\reference}[2]{{\small\texttt{\LR{[\href{http://bit.ly/#1}{#1}]}}}}
 \newcommand{\numdata}[1]{#1}
 \newcommand{\larger}[1]{{\large{#1}}}
 \newcommand{\hl}[1]{\textbf{#1}}
